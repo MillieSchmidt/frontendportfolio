@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    direction: ltr;
+}
+
+body {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: rgb(49, 49, 49);
+    color: white;
+    overflow-x: hidden;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/galaxy.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: movingStars 50s linear infinite;
+}
+
+@keyframes movingStars {
+    100% {
+        background-position: 3400px;
+    }
+}
+
+#progress {
+    height: 5px;
+    width: 0;
+    background-color: rgb(255, 157, 7);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background-color: transparent;
+    border-bottom: 1px solid thistle;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0.8rem 0;
+}
+
+.navlink {
+    color: rgb(49, 49, 49);
+    transition: 0.01s;
+}
+
+.navlink:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 157, 7);
+    transition: 0.01s;
+}
+
+header {
+    margin-bottom: -0.5rem;
+}
+
+h1 {
+    padding-top: 1rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 500px) {
+    .box img {
+        width: 20rem;
+        height: 15rem;
+    }
+} 
+
+@media screen and (min-width: 690px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.9rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .paleblue h4 {
+        width: 50%;
+    }
+
+    .box img {
+        width: 40rem;
+        height: 32rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .box img {
+        width: 50rem;
+        height: 37rem;
+    }
+}
+
+@keyframes makeOpaque {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveToRight {
+    100% {
+        transform: translate(500rem);
+    }
+}
+
+@keyframes moveToLeft {
+    100% {
+        transform: translate(-500rem);
+    }
+}
+
+section {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.paleblue {
+    opacity: 0;
+    animation: makeOpaque 2s ease-in forwards;
+}
+
+.lightblue {
+    width: 100vw;
+    height: 18rem;
+    margin-left: -500rem;
+    background-color: rgb(10, 200, 255, 0.4);
+    animation: moveToRight 3s ease-out forwards;
+}
+
+.skyblue {
+    width: 100vw;
+    height: 28rem;
+    margin-left: 500rem;
+    background-color: rgb(70, 150, 255, 0.4);
+}
+
+.blue {
+    opacity: 0;
+    background-color: rgb(0, 120, 235, 0.4);
+}
+
+.darkblue {
+    width: 100vw;
+    height: 18rem;
+    margin-left: -500rem;
+    background-color: rgb(0, 80, 205, 0.4);
+}
+
+figcaption {
+    font-size: 0.7rem;
+}
+
+@media screen and (min-width: 690px) {
+    span {
+        width: 75%;
+        font-size: 1rem;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: none;
+}
+
+.box p, .box img {
+    margin: 0;
+    font-weight: bold;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: rgb(49, 49, 49);
+}
+
+.arrow:hover {
+    text-decoration: none;
+    color: rgb(255, 157, 7);
+    transform: scale(1.1);
+    transition: 1000ms;
+    cursor: pointer;
+}
+
+.active {
+    display: block;
+}
+
+.bg-honey {
+    background-color: rgb(255, 207, 7);
+    box-shadow: 3px 3px 3px 3px rgba(49, 49, 49, 0.7);
+}
+
+.link {
+    color: rgb(10, 200, 255);
+}
+
+.link:hover {
+    color: rgb(255, 157, 7);
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    padding: 1rem;
+    background-color: rgb(49, 49, 49);;
+    color: white;
+    text-align: center;
+}
