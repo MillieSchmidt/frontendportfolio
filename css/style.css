@@ -127,24 +127,6 @@ h4 {
     }
 }
 
-/* @keyframes makeOpaque {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes moveToRight {
-    100% {
-        transform: translate(500rem);
-    }
-}
-
-@keyframes moveToLeft {
-    100% {
-        transform: translate(-500rem);
-    }
-} */
-
 section {
     display: flex;
     flex-flow: column wrap;
@@ -155,35 +137,25 @@ section {
     text-align: center;
 }
 
-/* .paleblue {
-    opacity: 0;
-    animation: makeOpaque 2s ease-in forwards;
-} */
-
 .lightblue {
     width: 100vw;
-    height: 18rem;
-    /* margin-left: -500rem; */
+    /* height: 18rem; */
     background-color: rgb(10, 200, 255, 0.4);
-    /* animation: moveToRight 3s ease-out forwards; */
 }
 
 .skyblue {
     width: 100vw;
     height: 28rem;
-    /* margin-left: 500rem; */
     background-color: rgb(70, 150, 255, 0.4);
 }
 
 .blue {
-    /* opacity: 0; */
     background-color: rgb(0, 120, 235, 0.4);
 }
 
 .darkblue {
     width: 100vw;
     height: 18rem;
-    /* margin-left: -500rem; */
     background-color: rgb(0, 80, 205, 0.4);
 }
 
