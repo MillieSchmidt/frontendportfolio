@@ -138,14 +138,10 @@ section {
 }
 
 .lightblue {
-    width: 100vw;
-    /* height: 18rem; */
     background-color: rgb(10, 200, 255, 0.4);
 }
 
 .skyblue {
-    width: 100vw;
-    height: 28rem;
     background-color: rgb(70, 150, 255, 0.4);
 }
 
@@ -154,8 +150,6 @@ section {
 }
 
 .darkblue {
-    width: 100vw;
-    height: 18rem;
     background-color: rgb(0, 80, 205, 0.4);
 }
 
