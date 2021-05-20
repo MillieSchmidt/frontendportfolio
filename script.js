@@ -12,14 +12,14 @@ document.onscroll = () => {
     const divTop = elem.getBoundingClientRect().top;
     const scrolled = window.pageYOffset;
     
-    const blue = document.querySelector('.blue');
-    const darkblue = document.querySelector('.darkblue');
+    const projects = document.querySelector('#projects');
+    const contact = document.querySelector('#contact');
 
     if (scrolled > divTop) {
         navBar.style.border = 'none';
         navBar.classList.add('bg-honey');
-        blue.style.animation = 'makeOpaque 4s ease-in forwards';
-        darkblue.style.animation = 'makeOpaque 7s ease-in forwards';
+        projects.style.animation = 'makeOpaque 4s ease-in forwards';
+        contact.style.animation = 'makeOpaque 7s ease-in forwards';
     } else {
         navBar.style.borderBottom = '1px solid thistle';
         navBar.classList.remove('bg-honey');
@@ -32,14 +32,14 @@ document.body.onload = () => {
     const divTop = elem.getBoundingClientRect().top;
     const scrolled = window.pageYOffset;
 
-    const blue = document.querySelector('.blue');
-    const darkblue = document.querySelector('.darkblue');
+    const projects = document.querySelector('#projects');
+    const contact = document.querySelector('#contact');
 
     if (scrolled > divTop) {
         navBar.style.border = "none";
         navBar.classList.add('bg-honey');
-        blue.style.animation = 'makeOpaque 4s ease-in forwards';
-        darkblue.style.animation = 'makeOpaque 7s ease-out forwards';
+        projects.style.animation = 'makeOpaque 4s ease-in forwards';
+        contact.style.animation = 'makeOpaque 7s ease-out forwards';
     } else {
         navBar.style.borderBottom = "1px solid thistle";
         navBar.classList.remove('bg-honey');

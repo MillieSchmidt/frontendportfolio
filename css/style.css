@@ -12,22 +12,12 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: whitesmoke;
+    background-image: url('../images/noise.png');
     font-size: 13px;
     letter-spacing: 1px;
     color: rgb(49, 49, 49);
-    color: white;
     overflow-x: hidden;
-
-    background-image: url('../images/galaxy.jpg');
-    background-size: cover;
-    background-position: center;
-    animation: movingStars 50s linear infinite;
-}
-
-@keyframes movingStars {
-    100% {
-        background-position: 3400px;
-    }
 }
 
 #progress {
@@ -60,18 +50,17 @@ ul {
 
 .navlink {
     color: rgb(49, 49, 49);
-    transition: 0.01s;
 }
 
 .navlink:hover {
     text-decoration: none;
     font-weight: bold;
-    color: rgb(255, 157, 7);
+    color: rgb(0, 80, 205);
     transition: 0.01s;
 }
 
 header {
-    margin-bottom: -0.5rem;
+    color: rgb(70, 150, 255);
 }
 
 h1 {
@@ -82,8 +71,13 @@ h1 {
 }
 
 h3 {
+    margin: 0;
     font-size: 1.2rem;
     text-align: center;
+}
+
+header h4 {
+    width: 50%;
 }
 
 h4 {
@@ -133,36 +127,40 @@ h4 {
     }
 }
 
+.wrapper {
+    margin-right: 8rem;
+    margin-left: 8rem;
+    border: 3px solid rgb(0, 80, 205);
+    border-radius: 2%;
+    overflow: hidden;
+    color: whitesmoke;
+}
+
 section {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    margin: 0;
     text-align: center;
 }
 
-.lightblue {
-    opacity: 0;
-    background-color: rgb(10, 200, 255, 0.4);
-    animation: makeOpaque 2s ease-in forwards;
-}
-
-.skyblue {
-    opacity: 0;
-    background-color: rgb(70, 150, 255, 0.4);
-    animation: makeOpaque 2s ease-in forwards;
+section h3 {
+    margin-bottom: 1rem;
 }
 
 .blue {
     opacity: 0;
-    background-color: rgb(0, 120, 235, 0.4);
+    background-color: rgb(0, 120, 235);
+    animation: makeOpaque 2s ease-in forwards;
+    /* background-color: rgb(170, 0, 142, 0.8); */
+    /* background-color: darkmagenta; */
 }
 
-.darkblue {
+.skyblue {
     opacity: 0;
-    background-color: rgb(0, 80, 205, 0.4);
+    background-color: rgb(70, 150, 255);
+    animation: makeOpaque 2s ease-in forwards;
 }
 
 figcaption {
@@ -199,7 +197,7 @@ figcaption {
 
 .arrow:hover {
     text-decoration: none;
-    color: rgb(255, 157, 7);
+    color: rgb(212, 127, 0);
     transform: scale(1.1);
     transition: 1000ms;
     cursor: pointer;
@@ -215,18 +213,21 @@ figcaption {
 }
 
 .link {
-    color: rgb(10, 200, 255);
+    color: rgb(49, 49, 49);
 }
 
 .link:hover {
-    color: rgb(255, 157, 7);
+    font-weight: bold;
+    color: rgb(0, 80, 205);
     text-decoration: none;
+    transition: 0.01s;
 }
 
 footer {
     width: 100%;
     bottom: 0;
     padding: 1rem;
+    margin-top: 2rem;
     background-color: rgb(49, 49, 49);;
     color: white;
     text-align: center;
