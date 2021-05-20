@@ -12,17 +12,19 @@ document.onscroll = () => {
     const divTop = elem.getBoundingClientRect().top;
     const scrolled = window.pageYOffset;
     
-    const projects = document.querySelector('#projects');
+    const experience = document.querySelector('#experience');
     const contact = document.querySelector('#contact');
 
     if (scrolled > divTop) {
         navBar.style.border = 'none';
         navBar.classList.add('bg-honey');
-        projects.style.animation = 'makeOpaque 4s ease-in forwards';
-        contact.style.animation = 'makeOpaque 7s ease-in forwards';
+        experience.style.animation = 'makeOpaque 4s ease-in forwards';
+        contact.style.animation = 'makeOpaque 6s ease-in forwards';
+        document.querySelector('#up').style.opacity = 1;
     } else {
         navBar.style.borderBottom = '1px solid thistle';
         navBar.classList.remove('bg-honey');
+        document.querySelector('#up').style.opacity = 0;
     }
 }
 
@@ -32,14 +34,14 @@ document.body.onload = () => {
     const divTop = elem.getBoundingClientRect().top;
     const scrolled = window.pageYOffset;
 
-    const projects = document.querySelector('#projects');
+    const experience = document.querySelector('#experience');
     const contact = document.querySelector('#contact');
 
     if (scrolled > divTop) {
         navBar.style.border = "none";
         navBar.classList.add('bg-honey');
-        projects.style.animation = 'makeOpaque 4s ease-in forwards';
-        contact.style.animation = 'makeOpaque 7s ease-out forwards';
+        experience.style.animation = 'makeOpaque 4s ease-in forwards';
+        contact.style.animation = 'makeOpaque 6s ease-out forwards';
     } else {
         navBar.style.borderBottom = "1px solid thistle";
         navBar.classList.remove('bg-honey');
@@ -79,7 +81,21 @@ function prevSlide() {
     project[currentlyActive].classList.add('active');
 }
 
-// ARROW CLICK EVENTS FOR CAROUSEL
+// EVENTS FOR CAROUSEL
+
+document.body.onload = () => {
+    setInterval(() => {
+        if (currentlyActive == project.length - 1) {
+            project[currentlyActive].classList.remove('active');
+            currentlyActive = 0;
+            project[currentlyActive].classList.add('active');
+        } else {
+            project[currentlyActive].classList.remove('active');
+            currentlyActive++;
+            project[currentlyActive].classList.add('active');
+        }
+    }, 5000);
+};
 
 prevBtn.addEventListener('click', function() {
     if (currentlyActive === 0) {
