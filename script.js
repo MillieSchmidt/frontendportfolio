@@ -43,7 +43,7 @@ document.body.onload = () => {
         experience.style.animation = 'makeOpaque 4s ease-in forwards';
         contact.style.animation = 'makeOpaque 6s ease-out forwards';
     } else {
-        navBar.style.borderBottom = "1px solid thistle";
+        navBar.style.borderBottom = '1px solid thistle';
         navBar.classList.remove('bg-honey');
     }
 }
