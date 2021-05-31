@@ -17,13 +17,15 @@ document.onscroll = () => {
 
     if (scrolled > divTop) {
         navBar.style.border = 'none';
-        navBar.classList.add('bg-honey');
+        navBar.classList.add('bg-galaxy');
+        document.querySelector('.navlist').classList.replace('navlist', 'navlist-white');
         experience.style.animation = 'makeOpaque 4s ease-in forwards';
         contact.style.animation = 'makeOpaque 6s ease-in forwards';
         document.querySelector('#up').style.opacity = 1;
     } else {
         navBar.style.borderBottom = '1px solid thistle';
-        navBar.classList.remove('bg-honey');
+        navBar.classList.remove('bg-galaxy');
+        document.querySelector('.navlist-white').classList.replace('navlist-white', 'navlist'); //BUG!
         document.querySelector('#up').style.opacity = 0;
     }
 }

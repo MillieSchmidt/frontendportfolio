@@ -37,7 +37,6 @@ nav {
     z-index: 999;
     background-color: white;
     border-bottom: 1px solid thistle;
-    /* background-image: url('../images/galaxy.jpg'); */
 }
 
 ul {
@@ -50,16 +49,17 @@ ul {
     margin: 0.8rem 0;
 }
 
-.navlink {
+.navlist a {
     color: rgb(49, 49, 49);
-    /* color: white; */
 }
 
-.navlink:hover {
-    text-decoration: none;
-    font-weight: bold;
-    color: rgb(247, 150, 4);
-    transition: 0.01s;
+.bg-galaxy {
+    background-image: url('../images/galaxy.jpg');
+    box-shadow: 3px 3px 3px 3px rgba(49, 49, 49, 0.7);
+}
+
+.navlist-white a {
+    color: white;
 }
 
 header {
@@ -232,11 +232,6 @@ figcaption {
     display: block;
 }
 
-.bg-honey {
-    background-color: rgb(255, 207, 7);
-    box-shadow: 3px 3px 3px 3px rgba(49, 49, 49, 0.7);
-}
-
 .link {
     color: rgb(49, 49, 49);
 }
@@ -289,7 +284,7 @@ footer {
     bottom: 0;
     padding: 1rem;
     margin-top: 2rem;
-    background-color: rgb(49, 49, 49);;
+    background-color: rgb(49, 49, 49);
     color: white;
     text-align: center;
 }
