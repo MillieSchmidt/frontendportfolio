@@ -14,7 +14,7 @@
     
     <div id="progress"></div>
     <nav>
-        <ul class="navlist">
+        <ul class="ul navlist">
             <li>
                 <a class="navlink" href="#who-am-i">Who am I</a>
             </li>
@@ -22,28 +22,32 @@
                 <a class="navlink" href="#projects">Projects</a>
             </li>
             <li>
-                <a class="navlink" href="#contact">Contact</a>
+                <a class="navlink" href="mailto:millieschmidt@protonmail.com">Contact</a>
             </li>
         </ul>
     </nav>
-
-    <header>
-        <h1 id="changeNav">Millie Schmidt</h1>
-        <h3>Junior Front End Developer</h3>
-        <section>
-            <h4>A motivated person learning coding and technology on my own. I believe in minimalism, speed and simplicity.</h4>
-            <img class="image" src="images/profile.jpg" alt="Just me" width="150rem" height="150rem" />
-            <figcaption>Relaxing in Tbilisi, Georgia, one of the best cities I've ever been to</figcaption>
-        </section>
-    </header>
-
+    
     <div class="wrapper">
+        <section class="profile">
+            <h1 id="changeNav">Millie Schmidt</h1>
+            <h3>Junior Front End Developer</h3>
+            <div>
+                <h4>Minimalism, speed and simplicity.</h4>
+                <img class="image" src="images/profile.jpg" alt="Just me" width="150rem" height="150rem" />
+                <p>Email me at <a class="link" href="mailto:millieschmidt@protonmail.com">millieschmidt@protonmail.com</a></p>
+            </div>
+        </section>
+
         <section class="blue" id="projects">
             <h3>My Projects</h3>
             <h4>Click on the screenshot to see the full app.</h4>
             <div class="project">
                 <a class="arrow prev"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
                 <div class="box active">
+                    <h4 style="font-weight: bold">Life In Pictures (Hebrew)</h4>
+                    <a href="https://lifeinpictures.herokuapp.com/home" target="_blank"><img src="./images/lifeinpictures.png" alt="My life in pictures" /></a>
+                </div>
+                <div class="box">
                     <h4 style="font-weight: bold">Bookstore (Hebrew)</h4>
                     <a href="https://millieschmidt.github.io/" target="_blank"><img src="./images/bookstore.png" alt="My own private bookstore" /></a>
                 </div>
@@ -62,35 +66,16 @@
                 <a class="arrow next"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
             </div>
         </section>
-
-        <section class="skyblue" id="who-am-i">
-            <h3>Who am I</h3>
-            <span>I have published eight books of prose and poems, and my works also appeared in various magazines.</span>
-            <span>I eventually realized, instead of paying other online shops to sell my books for me, I can just build my own shop.</span>
-            <span>My own online book store was my first project, and I love developing new apps and sites.</span>
-            <img src="images/lecture.jpg" alt="Giving a literary lecture" width="130rem" height="150rem" />
-            <figcaption>Lecturing about one of my books, right before COVID hit</figcaption>
-        </section>
-
-        <section class="blue" id="experience">
-            <h3>Experience</h3>
-            <span>Three years of technical experience in the Israeli Air Force, working with airplanes’ mechanical and electric aviation systems.</span>
-            <span>I have completed several projects, working with HTML, CSS, JS and React, and also have knowledge of PHP and databases.</span>
-            <span>I have completed courses from The University of Michigan on Coursera.com and from Frontendmasters.com.</span>
-        </section>
-        
-        <section class="skyblue" id="contact">
-            <h3>Contact Me</h3>
-            <span>I'm currently looking for my first job as a junior front end developer.</span>
-            <span>I would love to develop websites and apps for you, alone or as part of a team.</span>
-            <span>If you are looking for front end developer, please contact me!</span>
-            <div>
-                <span>Check out my <a class="link" href="https://www.linkedin.com/in/millie-schmidt-3827874a/" target="_blank">LinkedIn profile</a><br>
-                    Find me on <a class="link" href="https://github.com/MillieSchmidt" target="_blank">Github</a><br>
-                    Or just email me at <a class="link" href="mailto:millenium2124@gmail.com">millenium2124@gmail.com</a></span>
-            </div>
-        </section>
     </div>
+
+    <section class="skyblue" id="who-am-i">
+        <h3>Who am I</h3>
+        <span>I have published eight books of prose and poems, and my works also appeared in various magazines.</span>
+        <span>I eventually realized, instead of paying other online shops to sell my books for me, I can just build my own shop.</span>
+        <span>My own online book store was my first project, and I love developing new apps and sites.</span>
+        <img src="images/lecture.jpg" alt="Giving a literary lecture" width="130rem" height="150rem" />
+        <figcaption>Lecturing about one of my books, right before COVID hit</figcaption>
+    </section>
 
     <div id="up">
         <a href="#">
