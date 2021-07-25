@@ -8,7 +8,7 @@ document.onscroll = () => {
     progressBar.style.width = (distanceTop / pageHeight) * 100 + '%';
 
     const navBar = document.querySelector('nav');
-    const elem = document.getElementById('changeNav');
+    const elem = document.getElementById('change-nav');
     const divTop = elem.getBoundingClientRect().top;
     const scrolled = window.pageYOffset;
 
@@ -29,7 +29,7 @@ document.onscroll = () => {
 
 document.body.onload = () => {
     const navBar = document.querySelector('nav');
-    const elem = document.getElementById('changeNav');
+    const elem = document.getElementById('change-nav');
     const divTop = elem.getBoundingClientRect().top;
     const scrolled = window.pageYOffset;
 
@@ -42,7 +42,8 @@ document.body.onload = () => {
 
 // CAROUSEL CODE
 
-const project = document.querySelectorAll('.box');
+const project = document.querySelector('.project');
+const projectBox = document.querySelectorAll('.box');
 let currentlyActive = 0;
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
@@ -50,41 +51,41 @@ const nextBtn = document.querySelector('.next');
 // FUNCTIONS FOR CAROUSEL
 
 function backToStart() {
-    project[currentlyActive].classList.remove('active');
+    projectBox[currentlyActive].classList.remove('active');
     currentlyActive = 0;
-    project[currentlyActive].classList.add('active');
+    projectBox[currentlyActive].classList.add('active');
 }
 
 function nextSlide() {
-    project[currentlyActive].classList.remove('active');
+    projectBox[currentlyActive].classList.remove('active');
     currentlyActive++;
-    project[currentlyActive].classList.add('active');
+    projectBox[currentlyActive].classList.add('active');
 }
 
 function backToEnd() {
-    project[currentlyActive].classList.remove('active');
-    currentlyActive = project.length - 1;
-    project[currentlyActive].classList.add('active');
+    projectBox[currentlyActive].classList.remove('active');
+    currentlyActive = projectBox.length - 1;
+    projectBox[currentlyActive].classList.add('active');
 }
 
 function prevSlide() {
-    project[currentlyActive].classList.remove('active');
+    projectBox[currentlyActive].classList.remove('active');
     currentlyActive--;
-    project[currentlyActive].classList.add('active');
+    projectBox[currentlyActive].classList.add('active');
 }
 
 // EVENTS FOR CAROUSEL
 
 document.body.onload = () => {
     setInterval(() => {
-        if (currentlyActive == project.length - 1) {
-            project[currentlyActive].classList.remove('active');
+        if (currentlyActive == projectBox.length - 1) {
+            projectBox[currentlyActive].classList.remove('active');
             currentlyActive = 0;
-            project[currentlyActive].classList.add('active');
+            projectBox[currentlyActive].classList.add('active');
         } else {
-            project[currentlyActive].classList.remove('active');
+            projectBox[currentlyActive].classList.remove('active');
             currentlyActive++;
-            project[currentlyActive].classList.add('active');
+            projectBox[currentlyActive].classList.add('active');
         }
     }, 5000);
 };
@@ -98,9 +99,43 @@ prevBtn.addEventListener('click', function() {
 });
 
 nextBtn.addEventListener('click', function() {
-    if (currentlyActive === project.length - 1) {
+    if (currentlyActive === projectBox.length - 1) {
         backToStart();
     } else {
         nextSlide();
     }
 });
+
+// TOUCH FUNCTIONS
+let startingPos;
+let currentPos;
+
+function touchStart(event) {
+    startingPos = event.touches[0].clientX;
+    console.log("touchStart working!");
+}
+
+function touchMove(event) {
+    currentPos = event.touches[0].clientX;
+}
+
+function touchEnd() {
+    if (currentPos - startingPos > 100) {
+        if (currentlyActive === 0) {
+            backToEnd();
+        } else {
+            prevSlide();
+        }
+    } else if (currentPos !== 0 && startingPos - currentPos > 100) {
+        if (currentlyActive === projectBox.length - 1) {
+            backToStart();
+        } else {
+            nextSlide();
+        }
+    }
+    startingPos, currentPos = 0;
+}
+
+project.addEventListener('touchstart', touchStart);
+project.addEventListener('touchmove', touchMove);
+project.addEventListener('touchend', touchEnd);

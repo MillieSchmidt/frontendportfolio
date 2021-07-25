@@ -1,3 +1,7 @@
+:root {
+    --my-color: whitesmoke;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,7 +16,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: whitesmoke;
+    background-color: var(--my-color, whitesmoke);
     background-image: url('../images/noise.png');
     font-size: 13px;
     letter-spacing: 1px;
@@ -23,7 +27,7 @@ body {
 #progress {
     height: 5px;
     width: 0;
-    background-color: whitesmoke;
+    background-color: var(--my-color, whitesmoke);
     background-image: url('../images/noise.png');
     position: fixed;
     top: 0;
@@ -67,27 +71,19 @@ ul {
     margin-top: 2.9rem;
     opacity: 0;
     display: flex;
-    color: whitesmoke;
+    color: var(--my-color, whitesmoke);
     animation: makeOpaque 2s ease-in forwards;
 }
 
 .profile {
     margin-right: 1rem;
+    text-align: center;
     color: rgb(70, 150, 255);
 }
 
-h1 {
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
 .image {
+    width: 10em;
+    height: 10em;
     margin: 1rem 0;
     border-radius: 1rem;
 }
@@ -96,8 +92,15 @@ h3 {
     font-size: 1rem;
 }
 
-h4 {
-    font-size: 0.8rem;
+.link {
+    color: rgb(49, 49, 49);
+}
+
+.link:hover {
+    font-weight: bold;
+    color: rgb(0, 80, 205);
+    text-decoration: none;
+    transition: 0.01s;
 }
 
 @media screen and (min-width: 690px) {
@@ -144,28 +147,80 @@ section {
     text-align: center;
 }
 
-section h3 {
+h3 {
     margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 100px) {
+    .blue {
+        padding: 0;
+    }
+
+    .blue h3 {
+        margin: 0;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .blue h4 {
+        margin: 0;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .blue {
+        padding: 1rem;
+    }
+
+    .blue h3 {
+        margin: 0;
+        padding-top: 0;
+        font-size: 2.5rem;
+    }
+
+    .blue h4 {
+        margin: 0;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
 }
 
 .blue {
     background-color: rgb(0, 120, 235);
 }
 
-#who-am-i {
+.skyblue {
     opacity: 0;
     background-color: rgb(70, 150, 255);
+    color: var(--my-color, whitesmoke);
     animation: makeOpaque 2s ease-in forwards;
 }
 
-figcaption {
-    font-size: 0.7rem;
+.skills {
+    background-color: var(--my-color, whitesmoke);
+    background-image: url('../images/noise.png');
+    border-radius: 2rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 690px) {
-    span {
-        width: 75%;
-        font-size: 1rem;
+.skills div {
+    margin: 0 auto;
+}
+
+.skills img {
+    height: 2.5rem;
+}
+
+.skills img:last-child {
+    border-radius: 1.5rem;
+}
+
+@media screen and (min-width: 414px) {
+    .skills img {
+        height: 4rem;
     }
 }
 
@@ -174,6 +229,7 @@ figcaption {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .box {
@@ -185,12 +241,21 @@ figcaption {
     font-weight: bold;
 }
 
+@media screen and (min-width: 100px) {
+    .box img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .box img {
+        width: 80%;
+    }
+}
+
 .box img {
-    width: 80%;
-    height: 60%;
-    border: 3px solid whitesmoke;
+    border: 3px solid var(--my-color, whitesmoke);
     border-radius: 0.5rem;
-    overflow: hidden;
 }
 
 @media screen and (min-width: 100px) {
@@ -211,6 +276,18 @@ figcaption {
     }
 }
 
+@media screen and (min-width: 100px) {
+    .arrow {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .arrow {
+        display: block;
+    }
+}
+
 .arrow {
     color: rgb(49, 49, 49);
 }
@@ -225,17 +302,6 @@ figcaption {
 
 .active {
     display: block;
-}
-
-.link {
-    color: rgb(49, 49, 49);
-}
-
-.link:hover {
-    font-weight: bold;
-    color: rgb(0, 80, 205);
-    text-decoration: none;
-    transition: 0.01s;
 }
 
 @media screen and (min-width: 100px) {
@@ -267,7 +333,7 @@ figcaption {
 
 #up a {
     font-size: 1.7rem;
-    color: whitesmoke;
+    color: var(--my-color, whitesmoke);
 }
 
 #up a:hover {
@@ -275,10 +341,10 @@ figcaption {
 }
 
 footer {
+    position: relative;
     width: 100%;
     bottom: 0;
     padding: 1rem;
-    margin-top: 2rem;
     background-color: rgb(49, 49, 49);
     color: white;
     text-align: center;
