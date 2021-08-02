@@ -16,7 +16,7 @@
     <nav>
         <ul class="ul navlist">
             <li>
-                <a class="navlink" href="#who-am-i">Who am I</a>
+                <a class="navlink" href="#">Who am I</a>
             </li>
             <li>
                 <a class="navlink" href="#projects">Projects</a>
@@ -30,59 +30,203 @@
     <div class="wrapper">
         <section class="profile">
             <h1 id="change-nav">Millie Schmidt</h1>
-            <h3>Junior Front End Developer</h3>
-            <div>
+            <h3>Junior Frontend Developer</h3>
+            <div class="profile-details">
                 <h4>Minimalism, speed and simplicity.</h4>
                 <img class="image" src="images/profile.jpg" alt="Just me" />
-                <p>Email me at <a class="link" href="mailto:millieschmidt@protonmail.com">millieschmidt@protonmail.com</a></p>
+                <p>Email me at <br /><a class="link" href="mailto:millieschmidt@protonmail.com">millieschmidt@protonmail.com</a></p>
             </div>
         </section>
 
-        <section class="blue" id="projects">
-            <h3>My Projects</h3>
-            <h4>Click on the screenshot to see the full app.</h4>
-            <div class="project">
-                <a class="arrow prev"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
-                <div class="box active">
-                    <h4 style="font-weight: bold">Life In Pictures (Hebrew)</h4>
-                    <a href="https://lifeinpictures.herokuapp.com/home" target="_blank"><img src="./images/lifeinpictures.png" alt="My life in pictures" /></a>
+        <section class="about">
+            <div class="skills">
+                <div>
+                    <img src="images/HTML.png" alt="HTML" />
+                    <img src="images/CSS.png" alt="CSS" />
+                    <img src="images/JS.png" alt="JavaScript" />
+                    <img src="images/React.png" alt="React" />
                 </div>
-                <div class="box">
-                    <h4 style="font-weight: bold">Bookstore (Hebrew)</h4>
-                    <a href="https://millieschmidt.github.io/" target="_blank"><img src="./images/bookstore.png" alt="My own private bookstore" /></a>
-                </div>
-                <div class="box">
-                    <h4 style="font-weight: bold">React Bucket List</h4>
-                    <a href="https://react-bucket-list.herokuapp.com/" target="_blank"><img src="./images/reactbucketlist.png" alt="A simple frontend-only react app" /></a>
-                </div>
-                <div class="box">
-                    <h4 style="font-weight: bold">Feed a Mole</h4>
-                    <a href="https://millieschmidt.github.io/feedAMole/" target="_blank"><img src="./images/feedamole.png" alt="A game developed on Frontendmasters bootcamp" /></a>
-                </div>
-                <div class="box">
-                    <h4 style="font-weight: bold">Doggo App</h4>
-                    <a href="https://millieschmidt.github.io/doggosApp/" target="_blank"><img src="./images/doggos.png" alt="Let's look at doggos!" /></a>
-                </div>
-                <a class="arrow next"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
             </div>
+            <p>Start with the correct markup, make it pretty and responsive, and add efficient interactivity.</p>
+            <p>I love building and designing different sites and apps for others to watch or use.</p>
+            <p>I believe that a good site should be an efficient site, with no unnecessary features and elements.</p>
+            <p>I like to keep my own sites and apps simple and efficient, for a better user experience.</p>
         </section>
     </div>
 
-    <section class="skyblue" id="who-am-i">
-        <h3>Who am I</h3>
-        <div class="skills">
-            <div>
-                <img src="images/HTML.png" alt="HTML" />
-                <img src="images/CSS.png" alt="CSS" />
-                <img src="images/JS.png" alt="JavaScript" />
-                <img src="images/React.png" alt="React" />
+    <section class="projects" id="projects">
+        <h3>My Projects</h3>
+        <h4>Click on the screenshot to see the full app.</h4>
+        <div class="">
+            <div class="project-box">
+                <div class="box">
+                    <div class="project">
+                        <a href="https://lifeinpictures.herokuapp.com/home" target="_blank"><img src="./images/lifeinpictures.png" alt="My life in pictures" /></a>
+                    </div>
+                    <div class="project-description">
+                        <h4 style="font-weight: bold">Life In Pictures (Hebrew)</h4>
+                        <ul class="project-info">
+                            <li class="project-info-item">Summary: <span>decided to store my picutres on my own site</span></li>
+                            <li class="project-info-item">Primarily for: <span>web, but reponsive</span></li>
+                            <li class="project-info-item">Main Technologies: <span>React, JS, Bootstrap</span></li>
+                            <li class="project-info-item">Main Challenges: <span>rendering the selected picture</span></li>
+                            <li class="project-info-item">Solutions: <span>created a specific component which renders all pictures in the selected album, and only makes 
+                                visible the one that was clicked on by the user. If the picture's id is identical to the counter, which is changed with useState, it 
+                                receives a class that makes it visible.</span></li>
+                        </ul>
+                        <!-- <p>
+                            I decided to store my pictures on my own website instead of on Facebook or Instagram, so I built this site. It is primarily 
+                            meant for web but can be viewed on your smartphone as well. I used React for it, because 
+                            I figured it would be easier and faster, and I wanted a challenge to advance my React skills.
+                        </p>
+                        <p>
+                            I started with building one specific gallery, and only when it worked properly, I generalized my code so that 
+                            I'll be able to use it for all of the galleries in this site. It's simpler to solve one problem at a time.
+                        </p> -->
+                    </div>
+                </div>
             </div>
+
+            <div class="project-box">
+                <div class="box">
+                    <div class="project">
+                        <a href="https://millieschmidt.github.io/" target="_blank"><img src="./images/bookstore.png" alt="My own private bookstore" /></a>
+                    </div>
+                    <div class="project-description">
+                        <h4 style="font-weight: bold">Bookstore (Hebrew)</h4>
+                        <ul class="project-info">
+                            <li class="project-info-item">Summary: <span>created a bookstore for the books I authored</span></li>
+                            <li class="project-info-item">Primarily for: <span>web, but reponsive</span></li>
+                            <li class="project-info-item">Main Technologies: <span>HTML5, CSS3, Bootstrap</span></li>
+                            <li class="project-info-item">Main Challenges: <span>creating a functioning navbar in Hebrew to move between all the pages, 
+                                and a page for my podcast</span></li>
+                            <li class="project-info-item">Solutions: <span>took a navbar code from Bootstrap and adjusted it for my needs. As Hebrew is 
+                                written from right to left, I had to change Bootstrap's structure so it would fit that writing pattern. It was great fun 
+                                tweaking someone else's code and adjust it to my needs.<br />For my podcast I tried first to just upload the episodes from my 
+                                own computer, but they were too heavy, so I used an iframe tag to pull the episodes from Rumble.com.</span></li>
+                        </ul>
+                        <!-- <p>
+                            My first site was built to be my little private literary corner on the internet. It is meant primarily for web, 
+                            but can be viewed on mobile devices as well. It is a simple HTML and CSS website with very little JS, because 
+                            I didn't see a need to over-complicate it.
+                        </p>
+                        <p>
+                            The site contains several parts, some for books, others for a podcast and even a written interview with one of 
+                            my publishers. Oh yeah, I authored all the books presented there, too, and you can buy them to help me out. 
+                            I used Paypal buttons for it because I didn't want to use a paid service or build a backend.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="box">
+                    <div class="project">
+                        <a href="https://react-bucket-list.herokuapp.com/" target="_blank"><img src="./images/reactbucketlist.png" alt="A simple frontend-only react app" /></a>
+                    </div>
+                    <div class="project-description">
+                        <h4 style="font-weight: bold">React Bucket List</h4>
+                        <ul class="project-info">
+                            <li class="project-info-item">Summary: <span>a mobile site for storing your bucket list</span></li>
+                            <li class="project-info-item">Primarily for: <span>mobile</span></li>
+                            <li class="project-info-item">Main Technologies: <span>React, Bootstrap</span></li>
+                            <li class="project-info-item">Main Challenges: <span>creating the adding item form</span></li>
+                            <li class="project-info-item">Solutions: <span>the main function declares the values for the form, and changes them based 
+                                on user's actions. If one of the inputs stays empty, the function will alert the user to fill it. Of course, the form 
+                                is never really sent, since there is no backend to this site. The trick is using a JS object to keep the data.</span></li>
+                        </ul>
+                        <!-- <p>
+                            This React app was created out of two tutorials I found on Youtube, and decided to combine and make something a 
+                            bit more original. It was developed primarily for mobile.
+                        </p>
+                        <p>
+                            Of course, this app would work much better with a backend, but I wanted to develop my frontend skills. So, 
+                            instead of storing the data in an actual DB, it is stored in a JS object directly in the DOM. If you add an item 
+                            to the list and refresh the page, it will disappear. Please understand that this is just a frontend exercise.
+                        </p>
+                        <p>
+                            I decided to take the user straight to the about page, because I figured I should explain this is not a fully working 
+                            app. The colors are a bit weird too, I admit, but I kind of like it.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="box">
+                    <div class="project">
+                        <a href="https://millieschmidt.github.io/doggosApp/" target="_blank"><img src="./images/doggos.png" alt="Let's look at doggos!" /></a>
+                    </div>
+                    <div class="project-description">
+                        <h4 style="font-weight: bold">Doggo App</h4>
+                        <ul class="project-info">
+                            <li class="project-info-item">Summary: <span>choose a dog breed and enjoy the pictures</span></li>
+                            <li class="project-info-item">Primarily for: <span>mobile</span></li>
+                            <li class="project-info-item">Main Technologies: <span>JavaScript</span></li>
+                            <li class="project-info-item">Main Challenges: <span>working with promises</span></li>
+                            <li class="project-info-item">Solutions: <span>got an API for watching pictures of dog breeds, from 
+                                <a href="https://dog.ceo/dog-api/" target="_blank" style="color: black">dog.ceo/dog-api/</a>. First step was to fetch the 
+                                url, then turn it into json, then accessing the information inside the object and retreive whatever is needed. Step by step, 
+                                one small problem at a time, is the correct way. There were two uses for the data: one was to fill the dropdown menu, 
+                                and the other was to render the picture of the breed selected by the user. Until the picture is rendered, you see a spinner 
+                                on screen.</span></li>
+                        </ul>
+                        <!-- <p>
+                            Built as an exercise in working with APIs and promises. It probably looks better on mobile, but you can use 
+                            it either way.
+                        </p>
+                        <p>
+                            This site gets pictures of dog breeds from <a href="https://dog.ceo/dog-api/" target="_blank" style="color: lightgray">dog.ceo/dog-api/</a>, 
+                            and shows them for the user to enjoy. We were supposed to do something pretty solid with the background, but I 
+                            decided to improvise and give it the same image that is displayed by the user's choice of a breed. I think it makes 
+                            the whole site more interesting.
+                        </p>
+                        <p>
+                            The most interesting part was, of course, the JS script. I learned how to use the fetch method and all those "thens". 
+                            handling promises sounds frightening at first, but it's really not that complicated, and it's very interesting.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="box">
+                    <div class="project">
+                        <a href="https://millieschmidt.github.io/feedAMole/" target="_blank"><img src="./images/feedamole.png" alt="A game developed on Frontendmasters bootcamp" /></a>
+                    </div>
+                    <div class="project-description">
+                        <h4 style="font-weight: bold">Feed a Mole</h4>
+                        <ul class="project-info">
+                            <li class="project-info-item">Summary: <span>a browser game where you need to feed the moles to gain points</span></li>
+                            <li class="project-info-item">Primarily for: <span>web</span></li>
+                            <li class="project-info-item">Main Technologies: <span>JavaScript</span></li>
+                            <li class="project-info-item">Main Challenges: <span>timing the moles</span></li>
+                            <li class="project-info-item">Solutions: <span>the moles have several "states": they are either there, or are hungry, 
+                                or are sad, or are fed, or they are crawling back into their tunnel. Then there's two types of mole: the regular 
+                                one and the king mole. First I declared all the functions to deal with all those changes, by adding or removing 
+                                classes. Then I used setInterval and inside it set the setTimeouts to call each function after a certain amount of 
+                                millieseconds had passed. I know it's less elegant than requestAnimationFrame, but I think for the purpose of this 
+                                short, simple game, it's good enough.</span></li>
+                        </ul>
+                        <!-- <p>
+                            A browser game viewed best on web. All pictures were given to us students, so I mostly wrote the JavaScript. Once you get 
+                            the markup and style sheet right, that's pretty much all that's left, anyway.
+                        </p>
+                        <p>
+                            The script is based on setTimeouts and setIntervals, which call pre-defined functions that cause the moles to change state. 
+                            You must feed the moles to gain points, and with each point you gain, the worm at the top of the page gets longer. This is 
+                            a simple CSS trick based on "overflow: hidden" and a little help from the JS script.
+                        </p>
+                        <p>
+                            I think it's a very nice game.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <h4>Start with the correct markup, make it pretty and responsive, and add efficient interactivity.</h4>
-        <h4>I love building and designing different sites and apps for others to watch or use.</h4>
-        <h4>I believe that a good site should be an efficient site, with no unnecessary features and elements.</h4>
-        <h4>I like to keep my own sites and apps simple and efficient, for a better user experience.</h4>
     </section>
+    
 
     <div id="up">
         <a href="#">

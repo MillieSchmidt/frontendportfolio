@@ -7,135 +7,131 @@ document.onscroll = () => {
 
     progressBar.style.width = (distanceTop / pageHeight) * 100 + '%';
 
-    const navBar = document.querySelector('nav');
     const elem = document.getElementById('change-nav');
-    const divTop = elem.getBoundingClientRect().top;
+    const elemTop = elem.getBoundingClientRect().top;
     const scrolled = window.pageYOffset;
 
-    if (scrolled > divTop) {
-        navBar.style.border = 'none';
-        navBar.classList.add('bg-galaxy');
-        document.querySelector('ul').classList.remove('navlist');
-        document.querySelector('ul').classList.add('navlist-white');
+    if (scrolled > elemTop) {
         document.querySelector('#up').style.opacity = 1;
     } else {
-        navBar.style.borderBottom = '1px solid thistle';
-        navBar.classList.remove('bg-galaxy');
-        document.querySelector('ul').classList.remove('navlist-white');
-        document.querySelector('ul').classList.add('navlist');
         document.querySelector('#up').style.opacity = 0;
     }
 }
 
 document.body.onload = () => {
-    const navBar = document.querySelector('nav');
+    const progressBar = document.querySelector('#progress');
+    const distanceTop = window.pageYOffset;
+    const pageHeight = document.body.scrollHeight - window.innerHeight;
+
+    progressBar.style.width = (distanceTop / pageHeight) * 100 + '%';
+
     const elem = document.getElementById('change-nav');
-    const divTop = elem.getBoundingClientRect().top;
+    const elemTop = elem.getBoundingClientRect().top;
     const scrolled = window.pageYOffset;
 
-    if (scrolled > divTop) {
-        navBar.style.border = "none";
+    if (scrolled > elemTop) {
+        document.querySelector('#up').style.opacity = 1;
     } else {
-        navBar.style.borderBottom = '1px solid thistle';
+        document.querySelector('#up').style.opacity = 0;
     }
 }
 
 // CAROUSEL CODE
 
-const project = document.querySelector('.project');
-const projectBox = document.querySelectorAll('.box');
-let currentlyActive = 0;
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+// const project = document.querySelector('.project');
+// const projectBox = document.querySelectorAll('.box');
+// let currentlyActive = 0;
+// const prevBtn = document.querySelector('.prev');
+// const nextBtn = document.querySelector('.next');
 
 // FUNCTIONS FOR CAROUSEL
 
-function backToStart() {
-    projectBox[currentlyActive].classList.remove('active');
-    currentlyActive = 0;
-    projectBox[currentlyActive].classList.add('active');
-}
+// function backToStart() {
+//     projectBox[currentlyActive].classList.remove('active');
+//     currentlyActive = 0;
+//     projectBox[currentlyActive].classList.add('active');
+// }
 
-function nextSlide() {
-    projectBox[currentlyActive].classList.remove('active');
-    currentlyActive++;
-    projectBox[currentlyActive].classList.add('active');
-}
+// function nextSlide() {
+//     projectBox[currentlyActive].classList.remove('active');
+//     currentlyActive++;
+//     projectBox[currentlyActive].classList.add('active');
+// }
 
-function backToEnd() {
-    projectBox[currentlyActive].classList.remove('active');
-    currentlyActive = projectBox.length - 1;
-    projectBox[currentlyActive].classList.add('active');
-}
+// function backToEnd() {
+//     projectBox[currentlyActive].classList.remove('active');
+//     currentlyActive = projectBox.length - 1;
+//     projectBox[currentlyActive].classList.add('active');
+// }
 
-function prevSlide() {
-    projectBox[currentlyActive].classList.remove('active');
-    currentlyActive--;
-    projectBox[currentlyActive].classList.add('active');
-}
+// function prevSlide() {
+//     projectBox[currentlyActive].classList.remove('active');
+//     currentlyActive--;
+//     projectBox[currentlyActive].classList.add('active');
+// }
 
 // EVENTS FOR CAROUSEL
 
-document.body.onload = () => {
-    setInterval(() => {
-        if (currentlyActive == projectBox.length - 1) {
-            projectBox[currentlyActive].classList.remove('active');
-            currentlyActive = 0;
-            projectBox[currentlyActive].classList.add('active');
-        } else {
-            projectBox[currentlyActive].classList.remove('active');
-            currentlyActive++;
-            projectBox[currentlyActive].classList.add('active');
-        }
-    }, 5000);
-};
+// document.body.onload = () => {
+//     setInterval(() => {
+//         if (currentlyActive == projectBox.length - 1) {
+//             projectBox[currentlyActive].classList.remove('active');
+//             currentlyActive = 0;
+//             projectBox[currentlyActive].classList.add('active');
+//         } else {
+//             projectBox[currentlyActive].classList.remove('active');
+//             currentlyActive++;
+//             projectBox[currentlyActive].classList.add('active');
+//         }
+//     }, 5000);
+// };
 
-prevBtn.addEventListener('click', function() {
-    if (currentlyActive === 0) {
-        backToEnd();
-    } else {
-        prevSlide();
-    }
-});
+// prevBtn.addEventListener('click', function() {
+//     if (currentlyActive === 0) {
+//         backToEnd();
+//     } else {
+//         prevSlide();
+//     }
+// });
 
-nextBtn.addEventListener('click', function() {
-    if (currentlyActive === projectBox.length - 1) {
-        backToStart();
-    } else {
-        nextSlide();
-    }
-});
+// nextBtn.addEventListener('click', function() {
+//     if (currentlyActive === projectBox.length - 1) {
+//         backToStart();
+//     } else {
+//         nextSlide();
+//     }
+// });
 
 // TOUCH FUNCTIONS
-let startingPos;
-let currentPos;
+// let startingPos;
+// let currentPos;
 
-function touchStart(event) {
-    startingPos = event.touches[0].clientX;
-    console.log("touchStart working!");
-}
+// function touchStart(event) {
+//     startingPos = event.touches[0].clientX;
+//     console.log("touchStart working!");
+// }
 
-function touchMove(event) {
-    currentPos = event.touches[0].clientX;
-}
+// function touchMove(event) {
+//     currentPos = event.touches[0].clientX;
+// }
 
-function touchEnd() {
-    if (currentPos - startingPos > 100) {
-        if (currentlyActive === 0) {
-            backToEnd();
-        } else {
-            prevSlide();
-        }
-    } else if (currentPos !== 0 && startingPos - currentPos > 100) {
-        if (currentlyActive === projectBox.length - 1) {
-            backToStart();
-        } else {
-            nextSlide();
-        }
-    }
-    startingPos, currentPos = 0;
-}
+// function touchEnd() {
+//     if (currentPos - startingPos > 100) {
+//         if (currentlyActive === 0) {
+//             backToEnd();
+//         } else {
+//             prevSlide();
+//         }
+//     } else if (currentPos !== 0 && startingPos - currentPos > 100) {
+//         if (currentlyActive === projectBox.length - 1) {
+//             backToStart();
+//         } else {
+//             nextSlide();
+//         }
+//     }
+//     startingPos, currentPos = 0;
+// }
 
-project.addEventListener('touchstart', touchStart);
-project.addEventListener('touchmove', touchMove);
-project.addEventListener('touchend', touchEnd);
+// project.addEventListener('touchstart', touchStart);
+// project.addEventListener('touchmove', touchMove);
+// project.addEventListener('touchend', touchEnd);
